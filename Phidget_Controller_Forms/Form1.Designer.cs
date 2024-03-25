@@ -150,7 +150,7 @@ namespace Phidget_Controller_Forms
             series5.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
             series5.ChartArea = "ChartArea1";
             series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bubble;
-            series5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            series5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             series5.CustomProperties = "BubbleMinSize=2, BubbleScaleMax=100, BubbleMaxSize=20";
             series5.Legend = "Legend1";
             series5.MarkerSize = 20;

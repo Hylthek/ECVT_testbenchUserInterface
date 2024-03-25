@@ -199,8 +199,9 @@ namespace Phidget_Controller_Forms {
             //plot point
             dataGraph.Series[5].Points.AddXY(graphTimeMillis.ElapsedMilliseconds / 1000.0, processedPotVoltage);
             //remove point(s)
-            while (graphTimeMillis.ElapsedMilliseconds / 1000.0 - dataGraph.Series["ThrottlePosition"].Points.ElementAt(0).XValue > chartLength)
+            while (graphTimeMillis.ElapsedMilliseconds / 1000.0 - dataGraph.Series["ThrottlePosition"].Points.ElementAt(0).XValue > chartLength - 1) //chart length subtracted by one to avoid jittering
                 dataGraph.Series[5].Points.RemoveAt(0);
+            dataGraph.ResetAutoValues();
             //check if throttle motor is activated
             if ((ActivateThrottleMotorCheckbox.Checked) == true) {
                 try {
